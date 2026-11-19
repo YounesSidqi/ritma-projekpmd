@@ -1,0 +1,16 @@
+name: CI/CD Auto Pull and Rebuild
+
+on:
+  push:
+    branches: [ "fix", "master" ]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Trigger Docker Rebuild
+        run: docker compose up -d --build

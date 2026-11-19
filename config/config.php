@@ -10,9 +10,9 @@ error_reporting(E_ALL);
 // Global User Constant
 define('CURRENT_USER_ID', 1);
 
-$host     = "127.0.0.1";
+$host     = "db";
 $username = "root";
-$password = "";
+$password = "root";
 $database = "ProjectCCIT_PHP_NATIVE";
 
 try {
