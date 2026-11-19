@@ -137,7 +137,7 @@
                 <div
                     class="bg-white rounded-2xl p-5 border border-gray-200/80 shadow-sm hover:border-gray-300 transition-all flex items-center justify-between">
                     <div>
-                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Total Notes</p>
+                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Total Notess</p>
                         <p class="text-3xl font-extrabold text-gray-900 mt-1"><?= $totalNotes ?></p>
                         <p class="text-[11px] text-gray-400 mt-1">All notes in storage</p>
                     </div>

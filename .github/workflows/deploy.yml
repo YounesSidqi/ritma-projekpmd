@@ -1,0 +1,20 @@
+name: CI/CD Auto Pull and Rebuild
+
+on:
+  push:
+    branches: [ "fix", "master" ]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Trigger Docker Rebuild
+        env:
+          PATH: /usr/local/bin:/opt/homebrew/bin:/Applications/Docker.app/Contents/Resources/bin:/usr/bin:/bin:/usr/sbin:/sbin
+        run: |
+          docker compose down --remove-orphans || true
+          docker compose up -d --build
